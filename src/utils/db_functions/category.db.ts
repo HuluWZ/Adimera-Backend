@@ -2,7 +2,7 @@ import CategoryModel from "../../model/category.model";
 
 export async function getAll() {
   try {
-    const items = await CategoryModel.find();
+    const items = await CategoryModel.find().sort({_id:-1}) ;
     return items;
   } catch (error) {
     // Handle error

@@ -2,7 +2,7 @@ import SellerModel from "../../model/seller.model";
 
 export async function getAll() {
   try {
-    const items = await SellerModel.find();
+    const items = await SellerModel.find().sort({_id:-1}) ;
     return items;
   } catch (error) {
     // Handle error
