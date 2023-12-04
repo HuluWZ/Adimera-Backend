@@ -2,7 +2,7 @@ import ProductModel from "../../model/product.model";
 
 export async function getAll() {
   try {
-    const items = await ProductModel.find().populate("category").populate("uploadedBy");
+    const items = await ProductModel.find().populate("category").populate("uploadedBy").sort({_id:-1}) ;
     return items;
   } catch (error) {
     // Handle error
