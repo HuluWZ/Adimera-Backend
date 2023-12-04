@@ -3,8 +3,8 @@ import {
     create,
     getAllCategory,
     getCategory,
-    // deleteportfolio,
-    // update,
+    remove,
+    update,
     // addImage,
     // deleteImage
 } from "../../controller/category/index.category.controller";
@@ -16,8 +16,8 @@ const router = express.Router();
 router.post("/create", upload.array("files",10), create);
 router.get("/get", getAllCategory);
 router.get("/get/:id", getCategory);
-// router.put("/update/:id", AdminauthJWT, update);
-// router.delete("/delete/:id", AdminauthJWT, deleteportfolio);
+router.put("/update/:id", upload.any(), update);
+router.delete("/delete/:id", remove);
 // router.delete("/delete-image/:portfolioId/:id", AdminauthJWT, deleteImage);
 
 // Uncomment or add routes as needed

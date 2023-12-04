@@ -4,6 +4,7 @@ import news from "./admin/news.api";
 import category from "./admin/category.api";
 import product from "./admin/product.api";
 import seller from "./admin/seller.api";
+import report from "./admin/report.api";
 
 import contact from "./admin/contact.api";
 import contactinfo from "./admin/contactinfo.api";
@@ -27,6 +28,7 @@ router.use("/auth-admin", authadmin);
 router.use("/category", category);
 router.use("/product", product);
 router.use("/seller", seller);
+router.use("/report", report);
 
 router.use("/news", news);
 router.use("/restaurant", restaurant);
