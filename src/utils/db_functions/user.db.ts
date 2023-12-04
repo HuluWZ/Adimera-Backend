@@ -2,7 +2,7 @@ import { AdminModelID } from "../../interfaces/admin.interface";
 import UserModel from "../../model/user.model";
 
 export async function getAllUsers() {
-    return await UserModel.find()
+    return await UserModel.find().sort({_id:-1});
 }
 
 export async function showUsersbyId(id: string) {
