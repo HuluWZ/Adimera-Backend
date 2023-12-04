@@ -8,7 +8,8 @@ import {
   deactivate,
   addImage,
   resetPassword,
-  changePassword
+  changePassword,
+  remove
 } from "../../controller/auth/User/index.auth.controller";
 
 import { UserAuthJWT, AdminauthJWT} from "../../middleware/authJWT";
@@ -26,6 +27,7 @@ router.post("/change", UserAuthJWT, changePassword);
 router.post("/reset/:id", UserAuthJWT, resetPassword);
 router.post("/add-image", UserAuthJWT, upload.array("files", 10), addImage);
 router.post("/deactivate/:id", AdminauthJWT, deactivate)
+router.delete("/delete/:id", remove);
 
 
 export default router;

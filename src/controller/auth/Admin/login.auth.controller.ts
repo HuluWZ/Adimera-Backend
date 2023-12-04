@@ -21,6 +21,7 @@ export const login = async (req: Request, res: Response) => {
   // If the user is not found, return a 403 Forbidden response
   if (!getUser) {
     return res.status(403).json({
+      success:false,
       message: "Authentication Failed",
     });
   }
@@ -30,6 +31,7 @@ export const login = async (req: Request, res: Response) => {
     // If the passwords do not match, return a 401 Unauthorized response
     if (!response) {
       return res.status(401).json({
+        success:false,
         message: "Authentication Failed",
       });
     } else {
@@ -48,6 +50,7 @@ export const login = async (req: Request, res: Response) => {
 
       // Return a success response with the JWT token and the user's ID
       return res.status(200).json({
+        success:true,
         accessToken: jwtToken,
         userId: getUser._id,
       });
