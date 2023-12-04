@@ -16,5 +16,8 @@ import { resetPassword } from "./forget.auth.controller";
 import { deactivate } from "./dectavite.auth.controller"
 
 import { addImage} from "./addImage.auth.controller"
+
+import { remove} from "./delete.auth.controller"
+
 // Export the register, changePassword, getuser, resetPassword, getUsers, and login functions
-export { register, changePassword, getuser, resetPassword, getUsers, login, MyProfile, addImage, deactivate};
+export { register, changePassword, getuser, resetPassword, getUsers, login, MyProfile, addImage, deactivate,remove};
