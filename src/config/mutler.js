@@ -8,8 +8,8 @@ const storage = multer.diskStorage({
 });
 
 const fileFilter = (req, file, cb) => {
-    if (!file.originalname.match(/\.(jpg|jpeg|png|svg|webp|pdf)$/)) {
-        return cb(new Error('Please upload a valid image or PDF file'))
+    if (!file.originalname.match(/\.(jpg|jpeg|png)$/)) {
+        return cb(new Error('Please upload a valid image type'))
     }
     cb(undefined, true)
 }

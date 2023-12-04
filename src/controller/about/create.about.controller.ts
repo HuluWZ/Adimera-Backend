@@ -1,7 +1,7 @@
 // Importing the about model to the controller
 import AboutModel from "../../model/about.model";
 import { Request, Response } from "express";
-import {  loop } from "../../utils/db_functions/help";
+import { loop } from "../../utils/db_functions/help";
 
 // function to create an about
 export const create = async (req: Request, res: Response) => {

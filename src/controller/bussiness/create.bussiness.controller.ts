@@ -6,7 +6,7 @@ import { Mloop } from "../../utils/db_functions/help";
 export const create = async (req: Request, res: Response) => {
 
   // Destructure the data sent from req.body
-  const { name, description, link, rating, location,  email, type, phoneNumber, subType } = req.body;
+  const { name, description, link, rating, location, email, type, phoneNumber, subType } = req.body;
 
   // Try to create the business
   try {

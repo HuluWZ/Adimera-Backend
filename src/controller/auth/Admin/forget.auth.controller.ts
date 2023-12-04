@@ -34,7 +34,7 @@ export const resetPassword = async (req: Request, res: Response) => {
         verifyUser.password = hash;
 
         // Set the user's firstTimeLogin flag to true
-        verifyUser.firstTimeLogin = true;
+        // verifyUser.firstTimeLogin = true;
 
         // Save the user changes
         await verifyUser.save();

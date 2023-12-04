@@ -23,6 +23,14 @@ const newsSchema = new Schema({
     createdAt: {
         type: Date, 
         default: Date.now
+    }, 
+    count: {
+        type:Number, 
+        default: 0
+    }, 
+    view: {
+        type:Boolean, 
+        default: true
     }
 });
 

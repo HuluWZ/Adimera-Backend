@@ -3,10 +3,12 @@
 import { ObjectId } from "mongoose";
 
 export interface Admin {
-    fullName: string,
+    firstName: string,
+    lastName: string,
     email: string,
     password: string;
-    phoneNumber: string
+    phone: string, 
+    status: string
   }
   
 export interface AdminModelID extends Admin {

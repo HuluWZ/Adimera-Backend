@@ -9,7 +9,7 @@ export interface Car {
     files: []
     price: string
     createdAt: Date
-    type:String,
+    type:string,
     phoneNumber: string,
     dealershipName: string 
 }

@@ -37,7 +37,6 @@ export const login = async (req: Request, res: Response) => {
       const jwtToken = jwt.sign(
         {
           userId: getUser._id,
-          firstTimeLogin: getUser.firstTimeLogin,
           email: email,
         },
         // Sign the token with the JWT_SECRET environment variable
@@ -51,7 +50,6 @@ export const login = async (req: Request, res: Response) => {
       return res.status(200).json({
         accessToken: jwtToken,
         userId: getUser._id,
-        firstTimeLogin: getUser.firstTimeLogin,
       });
     }
   }).catch((err) => {

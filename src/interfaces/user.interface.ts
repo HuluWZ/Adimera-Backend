@@ -1,15 +1,15 @@
-//Typescript Interface for Admin
-
 import { ObjectId } from "mongoose";
 
 export interface User {
-    fullName: string,
+    firstName: string,
+    lastName: string,
     email: string,
     password: string;
-    phoneNumber: string
+    phone: string, 
+    status: string
+    // files: []
   }
   
 export interface UserModelId extends User {
     _id:ObjectId, 
   }
-  

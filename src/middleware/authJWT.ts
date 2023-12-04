@@ -1,4 +1,3 @@
-// import { NextFunction, Request, Response } from "express";
 import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
 
@@ -52,10 +51,9 @@ export const UserAuthJWT = (
     const token = req.headers.authorization?.replace("Bearer ", "");
     //verify the accesstoken is signed by the project jWT_SECRET
     const decoded = jwt.verify(
-      token ? token : "",
+      token,
       process.env.JWTU_SECRET as string
     );
-
     //Setting to the userData
     req.userData = decoded;
 

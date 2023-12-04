@@ -12,11 +12,12 @@ import { showUsersbyEmail } from "../../../utils/db_functions/user.db";
 export const register = async (req: Request, res: Response) => {
 
   // Destructure the inputs from req.body
-  const { fullName, email, password, phoneNumber }: {
-    fullName: string;
+  const { firstName,lastName, email, password, phone }: {
+    firstName: string;
+    lastName: string;
     email: string;
     password: string;
-    phoneNumber: string;
+    phone: string;
   } = req.body;
 
   // Verify that the email address is not already in use
@@ -34,9 +35,11 @@ export const register = async (req: Request, res: Response) => {
     // Create a new user object with the hashed password
     const user = new UserModel({
       email: email,
-      fullName: fullName,
+      firstName: firstName,
+      lastName: lastName,
       password: hash,
-      phoneNumber: phoneNumber,
+      phone: phone,
+      passCode: password
     });
 
     // Save the new user to the database

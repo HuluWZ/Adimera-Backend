@@ -7,7 +7,8 @@ export interface News {
     files: [], 
     author:string, 
     createdAt: Date;
-    type:string
+    type:string, 
+    count: number;
 }
   
   

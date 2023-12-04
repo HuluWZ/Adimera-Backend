@@ -7,6 +7,7 @@ import {
     getnewss,
     shownewss,
     deletenews,
+    toogle,
     Image
 } from "../../controller/news/index.news.controller";
 import { AdminauthJWT } from "../../middleware/authJWT";
@@ -19,7 +20,7 @@ router.post("/create", AdminauthJWT, upload.array("files", 10), create);
 router.post("/add-image/:id", AdminauthJWT, upload.array("files", 10), addImage);
 router.delete("/delete-image/:newsId/:id", AdminauthJWT, deleteImage);
 router.post("/image-news", AdminauthJWT, upload.array("files", 10), Image);
-
+router.get("/toogle/:id", toogle)
 router.get("/get", getnewss);
 router.get("/getlanding", getLanding);
 

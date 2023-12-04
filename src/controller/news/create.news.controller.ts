@@ -29,7 +29,7 @@ export const create = async (req: IncomingMessage, res: Response) => {
           body: body,
           type: type,
           files: urls,
-          author: user.fullName
+          author: user.firstName
         });
 
         // Save the news item to the database
@@ -49,7 +49,7 @@ export const create = async (req: IncomingMessage, res: Response) => {
           description: description,
           body: body,
           type: type,
-          author: user.fullName
+          author: user.firstName
         });
 
         // Save the news item to the database

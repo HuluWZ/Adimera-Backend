@@ -1,7 +1,9 @@
 import express from "express";
 import authadmin from "./admin/admin-auth.api";
 import news from "./admin/news.api";
-import job from "./admin/job.api";
+import category from "./admin/category.api";
+import product from "./admin/product.api";
+import seller from "./admin/seller.api";
 
 import contact from "./admin/contact.api";
 import contactinfo from "./admin/contactinfo.api";
@@ -22,9 +24,11 @@ const router = express.Router();
 
 // Define routes for various API modules and associate them with corresponding sub-routers
 router.use("/auth-admin", authadmin);
-router.use("/news", news);
-router.use("/job", job);
+router.use("/category", category);
+router.use("/product", product);
+router.use("/seller", seller);
 
+router.use("/news", news);
 router.use("/restaurant", restaurant);
 router.use("/portfolio", portfolio);
 router.use("/hero", hero);

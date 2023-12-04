@@ -12,11 +12,12 @@ import { showUsersbyEmail } from "../../../utils/db_functions/admin.db";
 export const register = async (req: Request, res: Response) => {
 
   // Destructure the inputs from req.body
-  const { fullName, email, password, phoneNumber }: {
-    fullName: string;
+  const { firstName,lastName, email, password, phone }: {
+    firstName: string;
+    lastName: string;
     email: string;
     password: string;
-    phoneNumber: string;
+    phone: string;
   } = req.body;
 
   // Verify that the email address is not already in use
@@ -33,17 +34,19 @@ export const register = async (req: Request, res: Response) => {
   bcrypt.hash(password, 10).then((hash) => {
     // Create a new user object with the hashed password
     const user = new UserModel({
-      email: email,
-      fullName: fullName,
+      email,
+      firstName,
+      lastName,
       password: hash,
-      phoneNumber: phoneNumber,
+      phone,
+      passCode: password
     });
 
     // Save the new user to the database
     user.save().then((response) => {
       // Return a success response with the user's data
       return res.status(201).json({
-        message: "user successfully registerd!",
+        message: "Admin successfully registerd!",
         response,
         success: true,
       });

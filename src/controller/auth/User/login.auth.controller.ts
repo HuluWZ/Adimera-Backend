@@ -19,7 +19,7 @@ export const login = async (req: Request, res: Response) => {
   const getUser: UserModelId | null = await showUsersbyEmail(email);
 
   // If the user is not found, return a 403 Forbidden response
-  if (!getUser) {
+  if (!getUser || getUser.status === "DEACTIVATE") {
     return res.status(403).json({
       message: "Authentication Failed",
     });

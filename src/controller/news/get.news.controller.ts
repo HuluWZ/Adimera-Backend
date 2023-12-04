@@ -20,6 +20,8 @@ export const shownewss = async (req: Request, res: Response) => {
   try {
     if (news) {
       // If the news item is found, respond with the data
+      news.count = news.count + 1
+      news.save()
       return res.status(200).json(news);
     }
   } catch (error) {
@@ -30,3 +32,16 @@ export const shownewss = async (req: Request, res: Response) => {
     });
   }
 };
+
+export const toogle = async(req:Request, res:Response) => {
+  const { id } = req.params
+
+  const news = await showSingle(id)
+
+  news.view = false 
+  news.save()
+  return res.status(200).json({
+    message: "toogle successfully", 
+    success: true
+  })
+}

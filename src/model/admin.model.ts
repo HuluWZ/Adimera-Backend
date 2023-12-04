@@ -1,34 +1,60 @@
 import { Schema, model } from "mongoose";
 
 // This is the schema for the admin users mongoose model
-const AdminSchema = new Schema({
-  fullName: {
+const AdminSchema  = new Schema({
+  firstName: {
     type: String,
-    required: [true, "fullname is required."],
+    required: [true, "FirstName is required."],
+    minlength: 3,
+  },
+  lastName: {
+    type: String,
+    required: [true, "LastName is required."],
     minlength: 3,
   },
   email: {
     type: String,
-    required: [true, "email is required"]
-  },
+    unique: true,
+    required: [true, "Email is required"]
+  }, 
   password: {
     type: String,
     required: [true, "Password is required"],
   },
-  phoneNumber: {
+  phone: {
     type: String,
-    required: [true, "phone number is required"],
+    minlength: 10,
+    maxlength: 13,
+    required: [true, "Phone number is required"],
   },
-  created: {
-    type: Date,
-    default: Date.now,
+  role: {
+    type:String,
+    default: "1"
   },
-  firstTimeLogin: {
-    type: Boolean,
-    default: true
+  address: {
+    type:String
   },
-});
-
-
+  profilePicture: {
+    type:String
+  },
+  gender: {
+    type:String
+  },
+  activationCode: {
+    type:String
+  },
+  passCode: {
+    type:String
+  },
+  status: {
+    type:String,
+    default :"1"
+  },
+  agreeStatus:{
+    type: String,
+  },
+},
+  { timestamps: true }
+);
 //exporting the model
 export default model("Admin", AdminSchema);
