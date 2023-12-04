@@ -36,13 +36,14 @@ export const create = async (req: Request, res: Response) => {
 
               category.save();
               return res.status(201).json({
-                  category,
+                category,
                  success: true,
                  message: "category created sucessfully",
               });
          }
         } else {
             return res.status(405).json({
+                success: false,
                 err: `${req.method} method not allowed`,
             });
         }
