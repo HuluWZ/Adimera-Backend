@@ -69,6 +69,7 @@ export const create = async (req: IncomingMessage, res: Response) => {
          }
         } else {
             return res.status(405).json({
+                success:false,
                 err: `${req.method} method not allowed`,
             });
         }
