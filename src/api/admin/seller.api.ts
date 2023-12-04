@@ -3,6 +3,8 @@ import {
     create,
     getAllSeller,
     getSeller,
+    update,
+    remove
 } from "../../controller/seller/index.seller.controller";
 import { AdminauthJWT } from "../../middleware/authJWT";
 const router = express.Router();
@@ -11,9 +13,8 @@ const router = express.Router();
 router.post("/create",  create);
 router.get("/get", getAllSeller);
 router.get("/get/:id", getSeller);
-// router.put("/update/:id", AdminauthJWT, update);
-// router.delete("/delete/:id", AdminauthJWT, deleteportfolio);
-// router.delete("/delete-image/:portfolioId/:id", AdminauthJWT, deleteImage);
+router.put("/update/:id", update);
+router.delete("/delete/:id", remove);
 
 // Uncomment or add routes as needed
 // router.delete("/delete", deleteEmployee);
