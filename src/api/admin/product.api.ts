@@ -13,7 +13,7 @@ import { upload } from "../../config/mutler";
 const router = express.Router();
 
 // Define the routes and associate them with controller functions and middleware
-router.post("/create", AdminauthJWT,upload.array("files",10), create);
+router.post("/create", AdminauthJWT,upload.array("files",5), create);
 router.get("/get", getAllProduct);
 router.get("/get/:id", getProduct);
 router.put("/update/:id", upload.any(), update);

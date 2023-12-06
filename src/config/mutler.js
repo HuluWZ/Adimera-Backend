@@ -1,6 +1,6 @@
 import multer from "multer";
 
-const DIR = "../uploads/"
+const DIR = "./"
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, DIR)
@@ -18,6 +18,6 @@ const fileFilter = (req, file, cb) => {
 
 export const upload = multer({
     storage: storage,
-    limits: { fileSize: 1024 * 1024 },
+    limits: { fileSize: 1024 * 1024 * 10 },
     fileFilter: fileFilter
 })

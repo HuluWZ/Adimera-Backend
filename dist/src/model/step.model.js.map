@@ -1,1 +1,0 @@
-{"version":3,"file":"step.model.js","sourceRoot":"","sources":["../../../src/model/step.model.ts"],"names":[],"mappings":";;AAAA,uCAAyC;AAGzC,iDAAiD;AACjD,MAAM,UAAU,GAAG,IAAI,iBAAM,CAAC;IAC5B,KAAK,EAAE,EAAE,IAAI,EAAE,MAAM,EAAE;IACvB,WAAW,EAAE,EAAE,IAAI,EAAE,MAAM,EAAE;CAC9B,CAAC,CAAC;AAEH,kBAAe,IAAA,gBAAK,EAAC,MAAM,EAAE,UAAU,CAAC,CAAC"}
