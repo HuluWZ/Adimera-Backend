@@ -7,7 +7,7 @@ const productSchema = new Schema({
   code: { type: String },
   price: {type: Number, required:[true,"price is required"]},
   image: [{type:String,required:true}],
-  uploadedBy: {type: Schema.Types.ObjectId, ref:"User",} ,
+  uploadedBy: {type: Schema.Types.ObjectId, ref:"Admin",} ,
   category: {type: Schema.Types.ObjectId, ref: "Category"},
   color: { type: String },
   size: { type: String },
