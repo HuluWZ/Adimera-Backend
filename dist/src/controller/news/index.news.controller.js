@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.toogle = exports.Image = exports.deleteImage = exports.addImage = exports.deletenews = exports.shownewss = exports.getnewss = exports.update = exports.create = void 0;
+const create_news_controller_1 = require("./create.news.controller");
+Object.defineProperty(exports, "create", { enumerable: true, get: function () { return create_news_controller_1.create; } });
+const addImage_news_controller_1 = require("./addImage.news.controller");
+Object.defineProperty(exports, "addImage", { enumerable: true, get: function () { return addImage_news_controller_1.addImage; } });
+const update_news_controller_1 = require("./update.news.controller");
+Object.defineProperty(exports, "update", { enumerable: true, get: function () { return update_news_controller_1.update; } });
+const get_news_controller_1 = require("./get.news.controller");
+Object.defineProperty(exports, "getnewss", { enumerable: true, get: function () { return get_news_controller_1.getnewss; } });
+Object.defineProperty(exports, "shownewss", { enumerable: true, get: function () { return get_news_controller_1.shownewss; } });
+Object.defineProperty(exports, "toogle", { enumerable: true, get: function () { return get_news_controller_1.toogle; } });
+const delete_news_controller_1 = require("./delete.news.controller");
+Object.defineProperty(exports, "deletenews", { enumerable: true, get: function () { return delete_news_controller_1.deletenews; } });
+const deleteImage_news_controller_1 = require("./deleteImage.news.controller");
+Object.defineProperty(exports, "deleteImage", { enumerable: true, get: function () { return deleteImage_news_controller_1.deleteImage; } });
+const image_news_controller_1 = require("./image.news.controller");
+Object.defineProperty(exports, "Image", { enumerable: true, get: function () { return image_news_controller_1.Image; } });
+//# sourceMappingURL=index.news.controller.js.map

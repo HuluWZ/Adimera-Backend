@@ -1,0 +1,1 @@
+{"version":3,"file":"hero.model.js","sourceRoot":"","sources":["../../../src/model/hero.model.ts"],"names":[],"mappings":";;AAAA,uCAAyC;AAGzC,kDAAkD;AAClD,MAAM,UAAU,GAAG,IAAI,iBAAM,CAAC;IAC5B,KAAK,EAAE,EAAE,IAAI,EAAE,MAAM,EAAE;IACvB,IAAI,EAAE,EAAE,IAAI,EAAE,MAAM,EAAE;IACtB,KAAK,EAAE,EAAE,IAAI,EAAE,KAAK,EAAE;CACvB,CAAC,CAAC;AAEH,kBAAe,IAAA,gBAAK,EAAC,MAAM,EAAE,UAAU,CAAC,CAAC"}
