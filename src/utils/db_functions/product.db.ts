@@ -21,5 +21,38 @@ export async function showSingle(id: string) {
   }
 }
 
+export async function showRelated(id: string,category:string) {
+  try {
+    const item = await ProductModel.find({
+      $and: [{ _id: { $ne: id } }, { category: category }],
+    })
+      .populate("category")
+      .populate("uploadedBy")
+      .sort({ _id: -1 });
+    if(item.length >0){
+
+      return item;
+    }else{
+      const items = await ProductModel.find({_id: { $ne: id }}).populate("category").populate("uploadedBy").sort({_id:-1});
+      return items;
+    }  
+  } catch (error) {
+    console.error("Error retrieving MenuType:", error);
+    throw error;
+  }
+}
+
+export async function getCategoryProduct(id: string) {
+  try {
+    const item = await ProductModel.find({category:id})
+      .populate("category")
+      .populate("uploadedBy");
+    return item;
+  } catch (error) {
+    console.error("Error retrieving MenuType:", error);
+    throw error;
+  }
+}
+
 
 
