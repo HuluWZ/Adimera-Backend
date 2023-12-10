@@ -76,12 +76,3 @@ PORT=3000
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
-## Author
-
-[Biruk Endris](https://www.bakiwebdev.com)
-
-## Links
-
-- Repository: [express-js-starter](https://github.com/bakiwebdev/express-js-starter)
-- Issue Tracker: [express-js-starter Issues](https://github.com/bakiwebdev/express-js-starter/issues)
-- Documentation: [express-js-starter Readme](https://github.com/bakiwebdev/express-js-starter#readme)
