@@ -29,12 +29,10 @@ export async function showRelated(id: string,category:string) {
       .populate("category")
       .populate("uploadedBy")
       .sort({ _id: -1 });
-    if(item.length >0){
-
+    if(item?.length > 0){
       return item;
     }else{
-      const items = await ProductModel.find({_id: { $ne: id }}).populate("category").populate("uploadedBy").sort({_id:-1});
-      return items;
+      return await ProductModel.find({_id: { $ne: id }}).populate("category").populate("uploadedBy").sort({_id:-1});
     }  
   } catch (error) {
     console.error("Error retrieving MenuType:", error);
